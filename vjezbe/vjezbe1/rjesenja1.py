@@ -1,4 +1,3 @@
-from re import L
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -17,12 +16,15 @@ def pravac():
 
     fig, ax = plt.subplots()
     ax.plot(t, s)
-
+    
     ax.set(xlabel='x', ylabel='y',
        title='Pravac')
     ax.grid()
 
-    
-    fig.savefig("test.pdf")
-    plt.show()
+    prikaz = input("1.prikazi na ekranu ili 2. spremi kao pdf: ")
+    if prikaz == "1":
+        plt.show()
+    elif prikaz == "2":
+        spremanje = input("pod kojim imenom zelite spremiti file? ")
+        fig.savefig("{}.pdf".format(spremanje))
 pravac()
