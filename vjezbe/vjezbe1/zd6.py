@@ -13,16 +13,17 @@ def kruznica():
     y = float(input("y koordinata točke: "))
 
     r1 = round(math.sqrt((x-p)**2+(y-q)**2),2)
+    r = round(r,2)
     print(r1)
 
     if r == r1:
         print("tocka lezi na kruznici")
     elif r < r1:
-        d = r1 - r
-        print("tocka lezi unutar kruznice i udaljena je od nje za {}".format(d))
+        d = round((r1 - r),2)
+        print("tocka lezi izvan kruznice i udaljena je od nje za {}".format(d))
     else:
-        d = r - r1
-        print("tocka lezi izvan kruznice i udaljena je od nje za {}".format)
+        d = round((r - r1),2)
+        print("tocka lezi unutar kruznice i udaljena je od nje za {}".format)
         
     krug = plt.Circle((p,q),r, fill=False)
     ax.scatter(x, y, s=r)
