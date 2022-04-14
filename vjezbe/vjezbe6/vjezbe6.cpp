@@ -19,29 +19,53 @@ void kruznica(float x,float y, float p, float q, float r)
         cout << "tocka se ne nalazi unutar kruznice";
 }
 
-void polje(int a, int b)
-{
+int polje(int niz[100],int a, int b)
+{   
+    int max, min,j=0;
     if(a<b){
-        for(int i=a+1; i<b; i++)
-        cout << i;
+        max = b;
+        min = a;
     }
-    else if(b<a){
-        for(int i=b+1; i<a; i++)
-        cout << i;
+    else if(b<a)
+    {
+        max = a;
+        min = b;
     }
-    else
-        cout << "nema cijelih brojeva izmedu a i b";
-
+    for(int i=min; i<=max; i++)
+    {
+        j++;
+    }
+    for(int i=0; i<j; i++)
+    {
+        niz[i] = i+min;
+        cout << niz[i]<<",";
+    }
+    
+    return j;
 }
 
+void funkcija(int niz[100],int j)
+{
+    for(int i=j-1; i>=0; i--)
+    {
+        cout << niz[i]<<" ";
+    }
+}
 
+void funkcija2(int niz[100], int j, int idx1, int idx2)
+{
+    
+    for(int i=)
+}
 
 int main()
 {
+    int niz[100];
     pravac(1,2,3,4);
     cout << endl;
     kruznica(1,1,0,0,1);
     cout << endl;
-    polje(-5,-5);
+    int j = polje(niz,10,20);
+    funkcija(niz,j);
     return 0;
 }
