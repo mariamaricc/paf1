@@ -3,6 +3,7 @@
 #include<math.h>
 using namespace std;
 
+<<<<<<< HEAD
 void HarmonicOscillator::move()
 {
     vx += double(0);
@@ -38,4 +39,21 @@ double HarmonicOscillator::range()
     }
     range = x;
     return range;
+=======
+
+HarmonicOscillator::HarmonicOscillator(double x0, double k, double m, double time, double step)
+{
+    x[0] = x0;
+    v[0] = 0.;
+    a[0] = - k * x0 / m;
+    t[0] = 0;
+    dt = step;
+    m = m;
+    k = k;
+    time = time;
+}
+void HarmonicOscillator::oscillate()
+{
+    move();
+>>>>>>> 68d7a10128e1a045396ce299e6dff5ebfd0a91a9
 }
